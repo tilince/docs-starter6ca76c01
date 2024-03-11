@@ -128,5 +128,11 @@
       "apiKey": "5ec85b3104c941999985d4f528b6376b",
       "indexName": "sunlyproject1-hdh34-spreading"
     }
+  },
+  "openapi": {
+    "petstore": {
+      "specPath": "docs/Using OpenAPI/OpenAPI Demo/petstore.yaml",
+      "outputDir": "docs/Using OpenAPI/OpenAPI Demo"
+    }
   }
 }

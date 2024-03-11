@@ -64,6 +64,68 @@ Run this command to creating or deleting the specified document instance.
 | `--create` | `undefined` | `true`   | A combination of lowercase letters, digits, and underscores is supported.<br />Create a new document instance, you need to be prompted for the values of each option.<br />`label`: The default is instance id<br />`routeBasePath`: The default is instance id<br /> |
 | `--delete` | `undefined` | `true`   | Delete specified document instance, enter the confirmation button as prompted. |
 
+#### `docuo gen-openapi-docs`
+
+Run this command to generate the corresponding mdx documentation according to the specified `OpenAPI` documentation.
+
+This command needs to be used in conjunction with the `openapi` parameter in `docuo.config.json`.
+
+The input command will display a list of openapi documents, identified by the `apiID`. Select the corresponding `apiID`. The docuo document will be generated internally according to the corresponding `apiID` configuration.
+
+![img alt](../docs_image/openapi_command.jpeg)
+
+<Note>
+`all` is the internal default, indicating that all documents are generated based on all configurations.
+</Note>
+
+[OpenAPI configuration](../Using%20OpenAPI/OpenAPI%20Setup.mdx) is as follows:
+
+<CodeGroup>
+ 
+```json docuo.config.json
+{
+  "openapi": {
+    "apiID": {
+      "specPath": "docs/Using OpenAPI/OpenAPI Demo/petstore.yaml",
+      "outputDir": "docs/Using OpenAPI/OpenAPI Demo"
+    }
+  }
+}
+```
+
+</CodeGroup>
+
+#### `docuo clean-openapi-docs`
+
+Run this command to clears the specified `OpenAPI` mdx documentation.
+
+This command needs to be used in conjunction with the `openapi` parameter in `docuo.config.json`.
+
+The input command will display a list of openapi documents, identified by the `apiID`. Select the specified `apiID` to clear.
+
+![img alt](../docs_image/openapi_command.jpeg)
+
+<Note>
+`all` is the internal default, indicating clear all.
+</Note>
+
+[OpenAPI configuration](../Using%20OpenAPI/OpenAPI%20Setup.mdx) is as follows:
+
+<CodeGroup>
+ 
+```json docuo.config.json
+{
+  "openapi": {
+    "apiID": {
+      "specPath": "docs/Using OpenAPI/OpenAPI Demo/petstore.yaml",
+      "outputDir": "docs/Using OpenAPI/OpenAPI Demo"
+    }
+  }
+}
+```
+
+</CodeGroup>
+
 ## Deployment
 
 ### Automatically
