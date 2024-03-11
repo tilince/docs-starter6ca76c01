@@ -70,7 +70,7 @@ Run this command to generate the corresponding mdx documentation according to th
 
 This command needs to be used in conjunction with the `openapi` parameter in `docuo.config.json`.
 
-The input command will display a list of openapi documents, identified by the `apiID`. Select the corresponding `apiID`. The docuo document will be generated internally according to the corresponding `apiID` configuration.
+The input command will display a list of openapi documents, identified by the `id`. Select the corresponding `id`. The docuo document will be generated internally according to the corresponding `id` configuration.
 
 ![img alt](../docs_image/openapi_command.jpeg)
 
@@ -78,14 +78,14 @@ The input command will display a list of openapi documents, identified by the `a
 `all` is the internal default, indicating that all documents are generated based on all configurations.
 </Note>
 
-[OpenAPI configuration](../Using%20OpenAPI/OpenAPI%20Setup.mdx) is as follows:
+[OpenAPI configuration](../Using%20OpenAPI/Setup%20OpenAPI.mdx) is as follows:
 
 <CodeGroup>
  
 ```json docuo.config.json
 {
   "openapi": {
-    "apiID": {
+    "id": {
       "specPath": "docs/Using OpenAPI/OpenAPI Demo/petstore.yaml",
       "outputDir": "docs/Using OpenAPI/OpenAPI Demo"
     }
@@ -101,7 +101,7 @@ Run this command to clears the specified `OpenAPI` mdx documentation.
 
 This command needs to be used in conjunction with the `openapi` parameter in `docuo.config.json`.
 
-The input command will display a list of openapi documents, identified by the `apiID`. Select the specified `apiID` to clear.
+The input command will display a list of openapi documents, identified by the `id`. Select the specified `id` to clear.
 
 ![img alt](../docs_image/openapi_command.jpeg)
 
@@ -109,14 +109,14 @@ The input command will display a list of openapi documents, identified by the `a
 `all` is the internal default, indicating clear all.
 </Note>
 
-[OpenAPI configuration](../Using%20OpenAPI/OpenAPI%20Setup.mdx) is as follows:
+[OpenAPI configuration](../Using%20OpenAPI/Setup%20OpenAPI.mdx) is as follows:
 
 <CodeGroup>
  
 ```json docuo.config.json
 {
   "openapi": {
-    "apiID": {
+    "id": {
       "specPath": "docs/Using OpenAPI/OpenAPI Demo/petstore.yaml",
       "outputDir": "docs/Using OpenAPI/OpenAPI Demo"
     }

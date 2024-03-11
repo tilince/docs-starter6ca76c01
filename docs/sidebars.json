@@ -107,8 +107,8 @@
       "items": [
         {
           "type": "doc",
-          "id": "using-openapi/openapi-setup",
-          "label": "OpenAPI Setup"
+          "id": "using-openapi/setup-openapi",
+          "label": "Setup OpenAPI"
         },
         {
           "type": "doc",

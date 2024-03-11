@@ -8,16 +8,17 @@ To describe your endpoints with OpenAPI, make sure you have a valid OpenAPI docu
 
 The method of setting up OpenAPI with Docuo is to add your OpenAPI documents directly to your docs repo. According to the following two parts:
 
-1. Define an `apiID` to uniquely identify the OpenAPI document. The value must be a string of lowercase letters and digits
-2. Then add the paths to the OpenAPI document to the `specPath` field of the openapi config in your `docuo.config.json`:
+1. Define an `id` to uniquely identify the OpenAPI document. The value must be a string of lowercase letters and digits
+2. Then add the path of the OpenAPI document to the `specPath` field of the openapi config in your `docuo.config.json`:
 
 <CodeGroup>
 
-```json docuo.config.json
+```json docuo.config.json {4}
 {
   "openapi": {
-    "apiID": {
-      "specPath": "docs/Using OpenAPI/OpenAPI Demo/petstore.yaml"
+    "id": {
+      "specPath": "docs/Using OpenAPI/OpenAPI Demo/petstore.yaml",
+      "outputDir": "docs/Using OpenAPI/OpenAPI Demo"
     }
   }
 }
@@ -27,22 +28,23 @@ The method of setting up OpenAPI with Docuo is to add your OpenAPI documents dir
 
 ## Create MDX files for OpenAPI endpoints
 
-To add the OpenAPI endpoints into your docs, each endpoint requires a corresponding MDX file. You can autogenerate these MDX files from your OpenAPI document using our `CLI`.
+To add the OpenAPI endpoints into your docs, each endpoint requires a corresponding MDX file. You can autogenerate these MDX files from your OpenAPI documents using our `CLI`.
 
 According to the following two parts:
 
-1. First you need to add the paths to the OpenAPI document to the `outputDir` field of the openapi config in your `docuo.config.json`
+1. Using the outputDir, specify the directory where MDX files corresponding to OpenAPI endpoints should be generated.
 
 <Tip>
-It must correspond to the apiID of the OpenAPI document above.
+It must correspond to the `id` of the OpenAPI document above.
 </Tip>
 
 <CodeGroup>
 
-```json docuo.config.json
+```json docuo.config.json {5}
 {
   "openapi": {
-    "apiID": {
+    "id": {
+      "specPath": "docs/Using OpenAPI/OpenAPI Demo/petstore.yaml",
       "outputDir": "docs/Using OpenAPI/OpenAPI Demo"
     }
   }
@@ -61,5 +63,7 @@ or alias:
 ```bash
 docuo god
 ```
+
+![img alt](../docs_image/openapi_command.jpeg)
 
 The generated mdx document is exactly like other documents. It can be configured in the sidebars file or automatically generated and added to the routing system. You can refer to the [sidebars](../Editing%20docs/Managing%20docs/Sidebar.mdx) module.
